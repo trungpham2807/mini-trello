@@ -266,3 +266,40 @@
   ul{
       list-style-type: none;
   }
+/* 
+  .task .edit {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 12px;
+    cursor: pointer;
+    top: 5px;
+    right: 30px;
+    color: #000;
+    border-radius: 1px;
+    border: solid 1px currentColor;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+} */
+
+
+.task .edit::before{
+  font-family: "FontAwesome";
+  position: absolute;
+    display: block;
+    width: 10px;
+    height: 12px;
+    cursor: pointer;
+    top: 5px;
+    right: 30px;
+}
+.task .edit::before{	
+  content: "\f044";
+  position: absolute;
+    display: block;
+    width: 10px;
+    height: 12px;
+    cursor: pointer;
+    top: 5px;
+    right: 30px;
+}
