@@ -36,9 +36,15 @@ document.getElementById("add-task").addEventListener("click", function () {
     trash.classList.add("trash");
     trash.innerHTML = "&times;";
     trash.addEventListener("click", removeTask);
+
+    var edit = document.createElement("div");
+    edit.classList.add("edit");
+    // edit.innerHTML = "&times;";
+    edit.addEventListener("click",editTask)
   
     task.appendChild(taskContent);
     task.appendChild(trash);
+    task.appendChild(edit);
   
     var tasks = document.getElementById("tasks-added");
     tasks.insertBefore(task, tasks.childNodes[0]);
@@ -47,6 +53,16 @@ document.getElementById("add-task").addEventListener("click", function () {
 task.addEventListener("dragend", dragEnd);
 // ...
 trash.addEventListener("click", removeTask);
+
+function editTask(event){
+  // var tasks = event.target.parentNode.parentNode;
+  // var task = event.target.parentNode;
+  // tasks.appendChild(task);
+  var task = document.createElement("li");
+  task.classList.add("task");
+  task.classList.add("fill");
+  alert("User entered " );
+}
 
 function removeTask(event) {
     // event represents the remove button
