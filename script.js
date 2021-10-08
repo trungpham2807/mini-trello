@@ -8,6 +8,18 @@ document.getElementById("add-task").addEventListener("click", function () {
     };
     taskInput.value = "";
   });
+  document.getElementById("task-value").addEventListener("keydown", function(taskValue){
+    switch(taskValue.key){
+      case "Enter":
+        var taskInput = document.getElementById("task-value");
+      if(taskInput.value != ""){addTask(taskInput.value)}
+      else{
+      alert("User entered again: " );
+      };
+      taskInput.value = "";
+    }
+    
+  })
   function addTask(taskValue) {
     var task = document.createElement("li");
     task.classList.add("task");
